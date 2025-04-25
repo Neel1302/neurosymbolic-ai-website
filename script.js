@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
             this.size = Math.random() * 3 + 1;
-            this.speedX = (Math.random() - 0.5) * 1.5;
-            this.speedY = (Math.random() - 0.5) * 1.5;
+            this.speedX = (Math.random() - 0.5) * 0.5;
+            this.speedY = (Math.random() - 0.5) * 0.5;
             this.connections = [];
             this.maxConnections = 3;
             this.activation = 0;
             this.color = `rgba(74, 144, 226, ${Math.random() * 0.5 + 0.1})`;
-            this.pulseSpeed = Math.random() * 0.02 + 0.01;
+            this.pulseSpeed = Math.random() * 0.01;
             this.pulseOffset = Math.random() * Math.PI * 2;
         }
         

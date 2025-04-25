@@ -42,54 +42,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Features Section */}
-      <section 
-        ref={featuresRef}
-        className="py-20 px-4 bg-neural-dark"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={featuresInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">
-            Our Technology
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Neural Networks",
-                description: "Advanced deep learning architectures for pattern recognition and prediction",
-                icon: "🧠"
-              },
-              {
-                title: "Symbolic Reasoning",
-                description: "Logical inference engines for structured knowledge processing",
-                icon: "🔍"
-              },
-              {
-                title: "Hybrid Integration",
-                description: "Seamless combination of neural and symbolic approaches",
-                icon: "⚡"
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={featuresInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="glass p-6 rounded-lg"
-              >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
       {/* Solutions Section */}
       <section 
         ref={solutionsRef}

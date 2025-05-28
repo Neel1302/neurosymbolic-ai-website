@@ -6,11 +6,36 @@
     <title>Neurosymbolic AI</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .navbar-gradient {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #4da6ff 0%, #4da6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .team-photo {
+            width: 128px;
+            height: 128px;
+            object-fit: cover;      /* Ensures the image fills the circle */
+            border-radius: 50%;     /* Makes the image circular */
+            margin-bottom: 16px;    /* Optional: space below the image */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <h1>Neurosymbolic Intelligence Company</h1>
+    <nav style="background:#18181b; padding:20px 0;">
+        <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:center; align-items:center;">
+            <span class="navbar-gradient">Neurosymbolic Intelligence Company</span>
         </div>
     </nav>
 
@@ -19,10 +44,13 @@
         <div class="hero-content">
             <!-- <h1>Coming Soon</h1> -->
             <!-- <p>Transforming industries with cutting-edge neurosymbolic intelligence</p> -->
-            <div class="coming-soon">
-                <span class="coming-soon-text">Coming Soon</span>
+            <!-- <div class="coming-soon">
+                <span class="coming-soon-text">Revolutionizing Logistics</span>
                 <span class="coming-soon-dot"></span>
-            </div>
+            </div> -->
+            <h2 id="typewriter" style="font-size:3rem; font-weight:bold; background: linear-gradient(90deg, #4da6ff 0%, #BF40BF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+                <!-- Typewriter text will appear here -->
+            </h2>
         </div>
     </header>
 
@@ -51,7 +79,89 @@
         </div>
     </section> -->
 
-    <section class="contact">
+    <!-- The Team Section (move this here) -->
+    <section style="background:#18181b; color:#fff; padding: 60px 0;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <h2 style="text-align:center; font-size:2.5rem; font-weight:bold; margin-bottom:48px;">The Team</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px;">
+                <!-- Team Member 1 -->
+                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
+                    <div style="text-align: center;">
+                        <img
+                            src="images/ufuk-topcu.webp"
+                            alt="Ufuk Topcu"
+                            class="team-photo"
+                        />
+                        <h3 style="font-size:1.25rem; font-weight:bold;">Ufuk Topcu</h3>
+                        <p style="color:#a1a1aa;">Principal Investigator</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
+                    <div style="text-align: center;">
+                        <img
+                            src="images/alvaro-valesquez.jpg"
+                            alt="Alvaro Valesquez"
+                            class="team-photo"
+                        />
+                        <h3 style="font-size:1.25rem; font-weight:bold;">Alvaro Valesquez</h3>
+                        <p style="color:#a1a1aa;">DARPA EEI Sponsor</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
+                    <div style="text-align: center;">
+                        <img
+                            src="images/atlas-wang.jpg"
+                            alt="Atlas Wang"
+                            class="team-photo"
+                        />
+                        <h3 style="font-size:1.25rem; font-weight:bold;">Atlas Wang</h3>
+                        <p style="color:#a1a1aa;">Academic Partner</p>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
+                    <div style="text-align: center;">
+                        <img
+                            src="images/yunhao-yang.avif"
+                            alt="Yunhao Yang"
+                            class="team-photo"
+                        />
+                        <h3 style="font-size:1.25rem; font-weight:bold;">Yunhao Yang</h3>
+                        <p style="color:#a1a1aa;">Research Intern</p>
+                    </div>
+                </div>
+                <!-- Team Member 5 -->
+                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
+                    <div style="text-align: center;">
+                        <img
+                            src="images/neel-bhatt.jpg"
+                            alt="Neel Bhatt"
+                            class="team-photo"
+                        />
+                        <h3 style="font-size:1.25rem; font-weight:bold;">Neel Bhatt</h3>
+                        <p style="color:#a1a1aa;">Research Scientist</p>
+                    </div>
+                </div>
+                <!-- Team Member 6 -->
+                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
+                    <div style="text-align: center;">
+                        <img
+                            src="images/christian-ellis.png"
+                            alt="Christian Ellis"
+                            class="team-photo"
+                        />
+                        <h3 style="font-size:1.25rem; font-weight:bold;">Christian Ellis</h3>
+                        <p style="color:#a1a1aa;">Product Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (should come after the team section) -->
+    <section id="contact">
         <div class="contact-content">
             <h2>Contact Us</h2>
             <p>Get in touch with our team to learn more about our neurosymbolic AI solutions.</p>
@@ -82,12 +192,40 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Neurosymbolic Intelligence Company. All rights reserved.</p>
+    <!-- Recognition Section -->
+    <section style="background:#23232b; color:#fff; padding: 40px 0;">
+        <div style="max-width:800px; margin:0 auto; text-align:center;">
+            <h2 style="font-size:2rem; font-weight:bold; margin-bottom:16px;">Recognition</h2>
+            <p style="font-size:1.1rem; color:#a1a1aa;">
+                Our company is proudly <strong>backed by Capital Factory</strong> and has been <strong>awarded by DARPA EEI</strong>.
+            </p>
         </div>
-    </footer>
+    </section>
+<!-- 
+    <footer style="background:#18181b; color:#a1a1aa; text-align:center; padding:24px 0;">
+        <div>
+            © 2024 Neurosymbolic AI. All rights reserved.<br>
+            <span style="color:#fff;">Backed by Capital Factory &middot; Awarded by DARPA EEI</span>
+        </div>
+    </footer> -->
 
     <script src="script.js"></script>
+    <script>
+      const text = "REVOLUTIONIZING LOGISTICS";
+      const el = document.getElementById("typewriter");
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          el.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100); // Adjust speed here
+        }
+      }
+
+      // Clear in case of reload
+      el.innerHTML = "";
+      typeWriter();
+    </script>
 </body>
 </html> 

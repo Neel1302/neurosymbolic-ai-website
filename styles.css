@@ -27,10 +27,20 @@ body {
 }
 
 .logo h1 {
-    font-size: 1.2rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: #ffffff;
     text-align: center;
+}
+
+.logo-gradient {
+    font-size: 2.5rem; /* Adjust as needed */
+    font-weight: bold;
+    background: linear-gradient(90deg, #4da6ff 0%, #7b61ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For Firefox */
+    color: transparent;
 }
 
 /* Hero Section */

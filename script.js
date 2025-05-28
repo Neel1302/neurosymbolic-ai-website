@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.speedX = (Math.random() - 0.5) * 0.5;
             this.speedY = (Math.random() - 0.5) * 0.5;
             this.connections = [];
-            this.maxConnections = 3;
+            this.maxConnections = 1;
             this.activation = 0;
             this.color = `rgba(74, 144, 226, ${Math.random() * 0.5 + 0.1})`;
             this.pulseSpeed = Math.random() * 0.01;
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const distance = Math.hypot(this.x - particle.x, this.y - particle.y);
                 
                 if (distance < 150) {
-                    const opacity = (1 - distance / 150) * (0.2 + this.activation * 0.3);
+                    const opacity = (1 - distance / 150) * (0.2 + this.activation * 0.1);
                     ctx.strokeStyle = `rgba(74, 144, 226, ${opacity})`;
                     ctx.lineWidth = 1 + this.activation;
                     

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="RevGuard gives billing teams more capacity across reimbursement.">
+  <title>RevGuard · Neurosymbolic Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><span>Neurosymbolic Intelligence Company</span></header>
+  <main>
+    <header class="intro">
+      <h1>RevGuard</h1>
+      <p>RevGuard gives billing teams more capacity across reimbursement.</p>
+    </header>
+    <div class="tabs" role="tablist" aria-label="RevGuard demonstration">
+      <button id="workflow-tab" role="tab" aria-selected="true" aria-controls="workflow" tabindex="0">Workflow</button>
+      <button id="results-tab" role="tab" aria-selected="false" aria-controls="results" tabindex="-1">Results</button>
+    </div>
+
+    <section id="workflow" class="panel" role="tabpanel" aria-labelledby="workflow-tab">
+      <div class="panel-heading"><span class="eyebrow">Illustrative workflow</span><h2>RevGuard resolves the problem before the case moves on</h2></div>
+      <div class="playback-header"><span class="playback-state" id="playback-state" role="status">Ready to play</span><span class="playback-stage" id="playback-stage">Visit and documentation</span></div>
+      <div class="timeline" role="progressbar" aria-label="Workflow progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="timeline-fill"></span></div>
+      <div class="journey" aria-label="One case moves through documentation, authorization, claim, and denial response">
+        <div class="station-marker" id="station-marker" aria-hidden="true"></div>
+        <img class="scope" src="assets/scope.png" alt="Visit and documentation, prior authorization, claim, denial and appeal">
+        <div class="track">
+          <div class="case-token" id="case-token"><div class="doc-sprite"></div><span id="case-name">One case</span></div>
+          <div class="attachment" id="attachment" hidden><b>Supporting record</b><span>Evidence for this request</span></div>
+          <div class="search" id="search" hidden></div>
+        </div>
+      </div>
+      <div class="story" aria-live="polite" aria-atomic="true">
+        <p class="step-label" id="step-label">01 / 12 · Evidence missing</p>
+        <h3 id="action">A required supporting record is missing</h3>
+        <p id="detail">The case stays here until the next action is resolved.</p>
+      </div>
+      <div class="controls" aria-label="Workflow playback">
+        <button class="primary" id="play" aria-pressed="false">Play story</button>
+        <button id="replay-now" hidden>Replay now</button>
+        <button id="previous" aria-label="Previous animation step" disabled>←</button>
+        <button id="next" aria-label="Next animation step">→</button>
+        <button id="restart">Restart</button>
+        <span class="progress" id="progress" aria-hidden="true">1 / 12</span>
+      </div>
+    </section>
+
+    <section id="results" class="panel" role="tabpanel" aria-labelledby="results-tab" hidden>
+      <div class="results-block">
+        <span class="eyebrow">Appeals research evaluation</span>
+        <h2>More accurate decisions, less manual review</h2>
+        <p class="results-intro">Agreement with independent reviewers on whether to overturn a denial.</p>
+        <div class="result-cards">
+          <article class="result-card">
+            <h3>Prioritize accuracy</h3>
+            <p class="result-headline"><strong>92.7%</strong><span>correct</span></p>
+            <div class="result-meter" aria-hidden="true"><span style="width:92.7%"></span></div>
+            <p class="result-detail">18% of cases auto-decided</p>
+            <p class="result-scope">Accuracy among automatically decided appeals.</p>
+          </article>
+          <article class="result-card">
+            <h3>Automate more cases</h3>
+            <p class="result-headline"><strong>52%</strong><span>auto-decided</span></p>
+            <div class="result-meter" aria-hidden="true"><span style="width:52%"></span></div>
+            <p class="result-detail">83% correct on those decisions</p>
+            <p class="result-scope">Remaining cases go to review at either setting.</p>
+          </article>
+        </div>
+        <p class="results-note">Two automation settings · Appeals research evaluation · Five-run averages</p>
+      </div>
+      <div class="panel-heading case-opening"><span class="eyebrow">A corrected denial assessment</span><h2>A denied hepatitis C treatment</h2><p>A 64-year-old man requested a 12-week course of treatment for hepatitis C. The health plan denied the request; the dispute was whether the treatment was medically necessary.</p><p class="case-question">RevGuard assessed whether that denial should stand.</p></div>
+      <div class="system">
+        <div class="system-heading"><span>Inside RevGuard</span><span>Error correction</span></div>
+        <div class="correction-art"><img src="assets/correction.png" alt="An initial assessment document connected by a curved correction arrow to a corrected assessment document"></div>
+        <div class="assessments">
+          <div><span>RevGuard’s initial assessment</span><strong>Uphold the treatment denial</strong></div>
+          <div id="corrected"><span>RevGuard’s corrected assessment</span><strong>Overturn the treatment denial</strong></div>
+        </div>
+      </div>
+      <div class="case-outcome" id="confirmation"><span class="eyebrow">Historical independent review</span><h3>The treatment was medically necessary.</h3><p>The physician reviewer found that the medical records supported treatment and warned that waiting for advanced liver damage would reduce its effectiveness. The denial had been overturned.</p><p class="case-match">RevGuard’s corrected assessment matched that review outcome.</p></div>
+      <p class="automation">Billing teams set the limits for automation.</p>
+    </section>
+    <noscript><p class="noscript">JavaScript is required for animation playback and the Results view.</p></noscript>
+  </main>
+</body>
+</html>

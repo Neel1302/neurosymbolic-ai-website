@@ -174,3 +174,25 @@ if (demoSection) {
         });
     }
 }
+
+const revguardFrame = document.getElementById('revguard-frame');
+if (revguardFrame) {
+    revguardFrame.addEventListener('load', () => {
+        const frameBody = revguardFrame.contentDocument?.body;
+        if (!frameBody || !revguardFrame.hasAttribute('src')) return;
+
+        const resize = () => {
+            revguardFrame.style.height = `${Math.ceil(frameBody.getBoundingClientRect().height) + 2}px`;
+        };
+        const observer = new ResizeObserver(resize);
+        observer.observe(frameBody);
+        resize();
+    });
+
+    const revguardObserver = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        revguardFrame.src = revguardFrame.dataset.src;
+        revguardObserver.disconnect();
+    });
+    revguardObserver.observe(revguardFrame);
+}

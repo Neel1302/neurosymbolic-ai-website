@@ -1,7 +1,7 @@
 'use strict';
-// P4 and P8 text and animation states from the existing presentation.
+// Narrative copy from billing_team_presentation (2).pptx; controls describe playback.
 const phases = ['Evidence missing','Locate the record','Record found','Evidence included','Authorization','Requirement changed','Request updated','Claim submitted','Denial received','Build the response','Response assembled','Apply reviewed feedback'];
-const lines = ['A required supporting record is missing','RevGuard locates the supporting record','The record arrives','Evidence included. The request can move forward.','The request reaches authorization','A payer requirement has changed','RevGuard updates the request','The claim is submitted','The payer denies the claim','RevGuard builds the response around the evidence','Response and supporting evidence are together','Reviewed feedback improves the next relevant case'];
+const lines = ["Find gaps and errors", "Find gaps and errors", "Find gaps and errors", "RevGuard resolves the problem before the case moves on", "Billing team can move more authorizations forward, even as payer rules change.", "Keep rules current", "Keep rules current", "The claim goes out. The work comes back.", "A denial can bring the same case back while new cases keep arriving.", "Billing team can recover more from denied claims.", "Billing team can recover more from denied claims.", "RevGuard learns from feedback to make better decisions next time."];
 const positions = [8,8,8,8,36,36,36,63,90,90,90,8];
 const $ = id => document.getElementById(id);
 const durations = [650,1700,900,1600,1200,2600,1700,1100,2400,2300,1800,3000];
@@ -30,7 +30,7 @@ function render(n) {
   $('step-label').textContent = String(current + 1).padStart(2,'0') + ' / 12 · ' + phases[current];
   $('action').textContent = lines[current];
   $('action').classList.toggle('warning',[0,5,8].includes(current));
-  $('detail').textContent = [0,1,2,5,8,9].includes(current) ? 'The case stays here until the next action is resolved.' : current === 11 ? 'An illustrative learning loop, not a measured outcome.' : 'The case changes before it advances.';
+  $('detail').textContent = current < 3 ? 'Keeping up requires checking both the current policy and the evidence in each case.' : [5,6].includes(current) ? 'Automatically extract structured rules from policies and update them when the source changes.' : current === 11 ? 'Less repeat work. More team capacity.' : '';
   $('previous').disabled = current === 0;
   $('next').disabled = current === 11;
   $('progress').textContent = (current + 1) + ' / 12';

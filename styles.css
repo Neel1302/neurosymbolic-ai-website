@@ -234,6 +234,69 @@ body {
     margin-bottom: 2rem;
 }
 
+.logistics-demo {
+    padding: 60px 16px;
+    text-align: center;
+    background: #18181b;
+}
+
+.logistics-demo h2 {
+    margin: 0 0 24px;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+.logistics-demo-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.logistics-demo-controls button,
+.logistics-demo-link {
+    display: inline-block;
+    border: 1px solid #4a5160;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background: #26262b;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logistics-demo-controls button[aria-pressed="true"] {
+    background: #244972;
+    border-color: #659edc;
+}
+
+.logistics-demo-link {
+    background: #17462f;
+    border-color: #478565;
+}
+
+.logistics-demo-controls button:focus-visible,
+.logistics-demo-link:focus-visible {
+    outline: 2px solid #8cc3ff;
+    outline-offset: 3px;
+}
+
+.logistics-demo iframe {
+    display: block;
+    width: 100%;
+    max-width: 1180px;
+    height: 620px;
+    margin: 0 auto 20px;
+    border: 1px solid #333a44;
+    border-radius: 12px;
+    background: #080f12;
+}
+
+.logistics-demo iframe[hidden] {
+    display: none;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -336,4 +399,4 @@ footer {
         width: 100%;
         max-width: none;
     }
-} 
+}

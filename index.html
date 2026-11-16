@@ -160,7 +160,20 @@
         </div>
     </section>
 
-    <!-- Contact Section (should come after the team section) -->
+    <section class="logistics-demo" id="logistics-demo" aria-labelledby="logistics-demo-title">
+        <h2 id="logistics-demo-title">Airlift Logistics</h2>
+        <div class="logistics-demo-controls" role="group" aria-label="Demo controls">
+            <button type="button" aria-pressed="true" aria-controls="logistics-pipeline">Pipeline</button>
+            <button type="button" aria-pressed="false" aria-controls="logistics-globe">Example</button>
+            <a class="logistics-demo-link" href="https://airlift-atlas-pacific.yyh23.chatgpt.site/">Go to the demo website</a>
+        </div>
+        <iframe id="logistics-pipeline" title="Animated logistics pipeline"
+            data-src="logistic-demo/pipeline.html?play=1"></iframe>
+        <iframe id="logistics-globe" title="Interactive airlift replanning globe"
+            data-src="logistic-demo/airlift-globe-demo.html" hidden></iframe>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <div class="contact-content">
             <h2>Contact Us</h2>
@@ -228,4 +241,4 @@
       typeWriter();
     </script>
 </body>
-</html> 
+</html>

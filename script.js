@@ -122,4 +122,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     animate();
-}); 
+});
+
+const demoSection = document.getElementById('logistics-demo');
+if (demoSection) {
+    const viewButtons = demoSection.querySelectorAll('button[aria-controls]');
+    const pipeline = document.getElementById('logistics-pipeline');
+    let activeFrame = pipeline;
+
+    function loadDemoFrame(frame) {
+        if (!frame.hasAttribute('src')) frame.src = frame.dataset.src;
+    }
+
+    // Start the story when visitors reach the section, so the first stage is visible.
+    const demoObserver = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        loadDemoFrame(activeFrame);
+        demoObserver.disconnect();
+    });
+    demoObserver.observe(demoSection);
+
+    for (const button of viewButtons) {
+        const frame = document.getElementById(button.getAttribute('aria-controls'));
+
+        frame.addEventListener('load', () => {
+            const frameBody = frame.contentDocument?.body;
+            if (!frameBody || !frame.hasAttribute('src')) return;
+
+            const resize = () => {
+                if (!frame.hidden) frame.style.height = `${Math.ceil(frameBody.getBoundingClientRect().height) + 2}px`;
+            };
+            const observer = new ResizeObserver(resize);
+            observer.observe(frameBody);
+            resize();
+        });
+
+        button.addEventListener('click', () => {
+            if (frame === activeFrame) return;
+
+            if (activeFrame === pipeline) {
+                pipeline.contentDocument?.dispatchEvent(new Event('pause-pipeline'));
+            }
+
+            activeFrame.hidden = true;
+            frame.hidden = false;
+            activeFrame = frame;
+            for (const viewButton of viewButtons) {
+                viewButton.setAttribute('aria-pressed', String(viewButton === button));
+            }
+            loadDemoFrame(frame);
+        });
+    }
+}

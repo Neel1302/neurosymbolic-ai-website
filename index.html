@@ -1,250 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurosymbolic AI</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .navbar-gradient {
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(90deg, #4da6ff 0%, #4da6ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 1px;
-            text-align: center;
-            display: block;
-            width: 100%;
-        }
-        .team-photo {
-            width: 128px;
-            height: 128px;
-            object-fit: cover;      /* Ensures the image fills the circle */
-            border-radius: 50%;     /* Makes the image circular */
-            margin-bottom: 16px;    /* Optional: space below the image */
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neurosymbolic Intelligence: verification under uncertainty for robotics, logistics, and revenue integrity.">
+ <title>Neurosymbolic Intelligence</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+ <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav style="background:#18181b; padding:20px 0;">
-        <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:center; align-items:center;">
-            <span class="navbar-gradient">Neurosymbolic Intelligence Company</span>
-        </div>
-    </nav>
+ <nav class="site-nav" aria-label="Primary">
+ <a class="brand" href="index.html">
+ <span class="brand-mark" aria-hidden="true">
+ <img src="images/logo.png" alt="">
+ </span>
+ <span class="brand-text">
+ <strong>Neurosymbolic</strong>
+ <span>Intelligence</span>
+ </span>
+ </a>
+ <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+ <span></span>
+ </button>
+ <div class="nav-pill" id="primary-nav">
+ <a href="index.html" aria-current="page">Home Robotics</a>
+ <a href="logistics.html">Logistics</a>
+ <a href="revguard/index.html">Compliance</a>
+ <a href="#contact">Contact</a>
+ </div>
+ </nav>
 
-    <header class="hero">
-        <canvas id="particles"></canvas>
-        <div class="hero-content">
-            <!-- <h1>Coming Soon</h1> -->
-            <!-- <p>Transforming industries with cutting-edge neurosymbolic intelligence</p> -->
-            <!-- <div class="coming-soon">
-                <span class="coming-soon-text">Revolutionizing Logistics</span>
-                <span class="coming-soon-dot"></span>
-            </div> -->
-            <h2 id="typewriter" style="font-size:3rem; font-weight:bold; background: linear-gradient(90deg, #4da6ff 0%, #BF40BF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
-                <!-- Typewriter text will appear here -->
-            </h2>
-        </div>
-    </header>
+ <header class="hero-stage">
+ <div class="hero-media" aria-hidden="true">
+ <video autoplay muted loop playsinline id="hero-video">
+ <source src="videos/hero.mp4" type="video/mp4">
+ </video>
+ </div>
+ <div class="hero-copy">
+ <h1>The era of verification<br>under uncertainty is at hand.</h1>
+ </div>
+ </header>
 
-    <!-- <section class="features">
-        <div class="feature-card">
-            <i class="fas fa-brain"></i>
-            <h3>Advanced AI</h3>
-            <p>State-of-the-art neurosymbolic systems</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Secure</h3>
-            <p>Enterprise-grade security</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Scalable</h3>
-            <p>Solutions that grow with you</p>
-        </div>
-    </section> -->
+ <section class="manifesto" aria-labelledby="manifesto-title">
+ <div class="manifesto-inner">
+      <h2 id="manifesto-title">We build intelligence that can act in the physical world and account for every decision.</h2>
+ <p>
+ Neural systems sense. Symbolic systems prove. Together they let robots and enterprise agents
+ operate when the world is incomplete, noisy, or adversarial.
+ </p>
+ <p>
+        Until now, teams chose between scale and assurance. Our neurosymbolic stack changes that,
+        uniting <em>perception</em>, <em>planning</em>, and <em>formal guarantees</em> so autonomous systems
+        stay fast without going opaque.
+ </p>
+ </div>
+ </section>
 
-    <!-- <section class="about">
-        <div class="about-content">
-            <h2>Our Mission</h2>
-            <p>We're dedicated to pushing the boundaries of artificial intelligence through innovative neurosymbolic approaches that combine the best of neural networks and symbolic reasoning.</p>
-        </div>
-    </section> -->
+ <section class="band" aria-labelledby="capabilities-title">
+ <div class="band-intro">
+ <p class="band-label">Built to decide when the world is incomplete</p>
+ <h2 id="capabilities-title">Predict. Verify. Then act.</h2>
+ </div>
+ <div class="capability-rows">
+ <article class="capability">
+ <div class="capability-copy">
+ <h3 class="capability-title">Predict</h3>
+ <p>See the stroller’s affordances before the push, including that it looks movable.</p>
+ </div>
+ <div class="capability-video">
+ <video muted loop playsinline>
+ <source src="videos/clip-predict.mp4" type="video/mp4">
+ </video>
+ </div>
+ </article>
+ <article class="capability capability--flip">
+ <div class="capability-copy">
+ <h3 class="capability-title">Verify</h3>
+ <p>Probe through interaction. The stroller is not movable: the cardboard box blocks it.</p>
+ </div>
+ <div class="capability-video">
+ <video muted loop playsinline>
+ <source src="videos/clip-verify.mp4" type="video/mp4">
+ </video>
+ </div>
+ </article>
+ <article class="capability">
+ <div class="capability-copy">
+ <h3 class="capability-title">Act</h3>
+ <p>Replan around the blocker. Move the box, then free the stroller to move.</p>
+ </div>
+ <div class="capability-video">
+ <video muted loop playsinline>
+ <source src="videos/clip-box.mp4" type="video/mp4">
+ </video>
+ </div>
+ </article>
+ </div>
+ </section>
 
-    <!-- The Team Section (move this here) -->
-    <section style="background:#18181b; color:#fff; padding: 60px 0;">
-        <div style="max-width:1100px; margin:0 auto;">
-            <h2 style="text-align:center; font-size:2.5rem; font-weight:bold; margin-bottom:48px;">The Team</h2>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px;">
-                <!-- Team Member 1 -->
-                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
-                    <div style="text-align: center;">
-                        <img
-                            src="images/ufuk-topcu.webp"
-                            alt="Ufuk Topcu"
-                            class="team-photo"
-                        />
-                        <h3 style="font-size:1.25rem; font-weight:bold;">Ufuk Topcu</h3>
-                        <p style="color:#a1a1aa;">Principal Investigator</p>
-                    </div>
-                </div>
-                <!-- Team Member 2 -->
-                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
-                    <div style="text-align: center;">
-                        <img
-                            src="images/alvaro-valesquez.jpg"
-                            alt="Alvaro Valesquez"
-                            class="team-photo"
-                        />
-                        <h3 style="font-size:1.25rem; font-weight:bold;">Alvaro Valesquez</h3>
-                        <p style="color:#a1a1aa;">DARPA EEI Sponsor</p>
-                    </div>
-                </div>
-                <!-- Team Member 3 -->
-                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
-                    <div style="text-align: center;">
-                        <img
-                            src="images/atlas-wang.jpg"
-                            alt="Atlas Wang"
-                            class="team-photo"
-                        />
-                        <h3 style="font-size:1.25rem; font-weight:bold;">Atlas Wang</h3>
-                        <p style="color:#a1a1aa;">Academic Partner</p>
-                    </div>
-                </div>
-                <!-- Team Member 4 -->
-                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
-                    <div style="text-align: center;">
-                        <img
-                            src="images/yunhao-yang.avif"
-                            alt="Yunhao Yang"
-                            class="team-photo"
-                        />
-                        <h3 style="font-size:1.25rem; font-weight:bold;">Yunhao Yang</h3>
-                        <p style="color:#a1a1aa;">Research Intern</p>
-                    </div>
-                </div>
-                <!-- Team Member 5 -->
-                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
-                    <div style="text-align: center;">
-                        <img
-                            src="images/neel-bhatt.jpg"
-                            alt="Neel Bhatt"
-                            class="team-photo"
-                        />
-                        <h3 style="font-size:1.25rem; font-weight:bold;">Neel Bhatt</h3>
-                        <p style="color:#a1a1aa;">Research Scientist</p>
-                    </div>
-                </div>
-                <!-- Team Member 6 -->
-                <div style="background:#27272a; border-radius:16px; padding:32px; text-align:center;">
-                    <div style="text-align: center;">
-                        <img
-                            src="images/christian-ellis.png"
-                            alt="Christian Ellis"
-                            class="team-photo"
-                        />
-                        <h3 style="font-size:1.25rem; font-weight:bold;">Christian Ellis</h3>
-                        <p style="color:#a1a1aa;">Product Manager</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <section class="products" id="demos" aria-labelledby="products-title">
+ <div class="products-header">
+ <h2 id="products-title">From the lab floor to the ops floor</h2>
+ <p>Explore live demos of neurosymbolic planning and revenue-integrity workflows.</p>
+ </div>
+ <div class="product-cards">
+ <a class="product-card" href="logistics.html">
+ <div>
+ <p class="eyebrow">Demo 01</p>
+ <h3>Airlift Logistics</h3>
+ <p>Vision-language-logistic agents that detect disruption, replan affected paths, and resolve conflicts in the air network.</p>
+ </div>
+ <span class="cta">Open logistics demo</span>
+ </a>
+ <a class="product-card" href="revguard/index.html">
+ <div>
+ <p class="eyebrow">Demo 02</p>
+ <h3>Compliance</h3>
+          <p>Billing capacity for reimbursement: gap finding, evidence attachment, and self-correcting appeals research.</p>
+ </div>
+ <span class="cta">Open Compliance demo</span>
+ </a>
+ </div>
+ </section>
 
-    <section class="logistics-demo" id="logistics-demo" aria-labelledby="logistics-demo-title">
-        <h2 id="logistics-demo-title">Airlift Logistics</h2>
-        <div class="logistics-demo-controls" role="group" aria-label="Demo controls">
-            <button type="button" aria-pressed="true" aria-controls="logistics-pipeline">Pipeline</button>
-            <button type="button" aria-pressed="false" aria-controls="logistics-globe">Example</button>
-            <a class="logistics-demo-link" href="https://airlift-atlas-pacific.yyh23.chatgpt.site/">Go to the demo website</a>
-        </div>
-        <iframe id="logistics-pipeline" title="Animated logistics pipeline"
-            data-src="logistic-demo/pipeline.html?play=1"></iframe>
-        <iframe id="logistics-globe" title="Interactive airlift replanning globe"
-            data-src="logistic-demo/airlift-globe-demo.html" hidden></iframe>
-    </section>
+ <section class="team" id="team" aria-labelledby="team-title">
+ <h2 id="team-title">Built by the team making assurance practical</h2>
+ <p class="team-lead">Researchers and builders spanning formal methods, robot learning, and enterprise AI. NSI has been selected by the DARPA DICE (Decentralized Artificial Intelligence through Controlled Emergence) program.</p>
+ <div class="team-grid team-grid-top">
+ <article class="team-card">
+ <img class="team-photo" src="images/alvaro-velasquez.jpg" alt="Alvaro Velasquez">
+ <h3>Alvaro Velasquez</h3>
+ <p>CEO</p>
+ </article>
+ <article class="team-card">
+ <img class="team-photo" src="images/ufuk-topcu.webp" alt="Ufuk Topcu">
+ <h3>Ufuk Topcu</h3>
+ <p>Co-Founder</p>
+ </article>
+ <article class="team-card">
+ <img class="team-photo" src="images/neel-bhatt.jpg" alt="Neel P. Bhatt">
+ <h3>Neel P. Bhatt</h3>
+ <p>Head of Research</p>
+ </article>
+ <article class="team-card">
+ <img class="team-photo" src="images/yunhao-yang.avif" alt="Yunhao Yang">
+ <h3>Yunhao Yang</h3>
+ <p>Research Scientist</p>
+ </article>
+ </div>
+ <div class="team-grid team-grid-bottom">
+ <article class="team-card">
+ <img class="team-photo" src="images/thiago-sandoval.jpg" alt="Thiago Sandoval">
+ <h3>Thiago Sandoval</h3>
+ <p>Research Scientist</p>
+ </article>
+ <article class="team-card">
+ <img class="team-photo" src="images/michal-podolinsky.jpg" alt="Michal Podolinsky">
+ <h3>Michal Podolinsky</h3>
+ <p>Research Scientist</p>
+ </article>
+ <article class="team-card">
+ <img class="team-photo" src="images/atlas-wang.jpg" alt="Atlas Wang">
+ <h3>Atlas Wang</h3>
+ <p>Academic Partner</p>
+ </article>
+ </div>
+ </section>
 
-    <section class="logistics-demo revguard-demo" id="revguard-demo" aria-labelledby="revguard-demo-title">
-        <h2 id="revguard-demo-title">RevGuard</h2>
-        <p class="revguard-intro">RevGuard gives billing teams more capacity across reimbursement.</p>
-        <iframe id="revguard-frame" title="RevGuard workflow and research results" data-src="revguard/index.html"></iframe>
-    </section>
+ <section class="contact" id="contact" aria-labelledby="contact-title">
+ <div class="contact-inner">
+ <h2 id="contact-title">Contact us</h2>
+ <p>Talk with the team about neurosymbolic systems for robotics, logistics, and revenue integrity.</p>
+ <form class="contact-form" action="mailto:ufuktopcu@gmail.com" method="post" enctype="text/plain">
+ <div class="form-group">
+ <label for="name">Name</label>
+ <input type="text" id="name" name="name" required>
+ </div>
+ <div class="form-group">
+ <label for="email">Email</label>
+ <input type="email" id="email" name="email" required>
+ </div>
+ <div class="form-group">
+ <label for="subject">Subject</label>
+ <input type="text" id="subject" name="subject" required>
+ </div>
+ <div class="form-group">
+ <label for="message">Message</label>
+ <textarea id="message" name="message" rows="5" required></textarea>
+ </div>
+ <button type="submit" class="submit-button">Send message</button>
+ </form>
+ </div>
+ </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-content">
-            <h2>Contact Us</h2>
-            <p>Get in touch with our team to learn more about our neurosymbolic AI solutions.</p>
-            
-            <form class="contact-form" action="mailto:ufuktopcu@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-        </div>
-    </section>
+ <footer class="site-footer">
+ <div class="footer-row">
+ <div>
+ <p>© 2026 Neurosymbolic Intelligence</p>
+        <p class="recognition">Selected by DARPA DICE (Decentralized Artificial Intelligence through Controlled Emergence)</p>
+ </div>
+ <div class="footer-links">
+ <a href="index.html">Home Robotics</a>
+ <a href="logistics.html">Logistics</a>
+ <a href="revguard/index.html">Compliance</a>
+ <a href="mailto:ufuktopcu@gmail.com">Email</a>
+ </div>
+ </div>
+ </footer>
 
-    <!-- Recognition Section -->
-    <section style="background:#23232b; color:#fff; padding: 40px 0;">
-        <div style="max-width:800px; margin:0 auto; text-align:center;">
-            <h2 style="font-size:2rem; font-weight:bold; margin-bottom:16px;">Recognition</h2>
-            <p style="font-size:1.1rem; color:#a1a1aa;">
-                Our company is proudly <strong>backed by Capital Factory</strong> and has been <strong>awarded by DARPA EEI</strong>.
-            </p>
-        </div>
-    </section>
-<!-- 
-    <footer style="background:#18181b; color:#a1a1aa; text-align:center; padding:24px 0;">
-        <div>
-            © 2024 Neurosymbolic AI. All rights reserved.<br>
-            <span style="color:#fff;">Backed by Capital Factory &middot; Awarded by DARPA EEI</span>
-        </div>
-    </footer> -->
-
-    <script src="script.js"></script>
-    <script>
-      const text = "REVOLUTIONIZING LOGISTICS";
-      const el = document.getElementById("typewriter");
-      let i = 0;
-
-      function typeWriter() {
-        if (i < text.length) {
-          el.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100); // Adjust speed here
-        }
-      }
-
-      // Clear in case of reload
-      el.innerHTML = "";
-      typeWriter();
-    </script>
+ <script src="script.js"></script>
 </body>
 </html>
